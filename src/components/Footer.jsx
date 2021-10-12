@@ -119,7 +119,7 @@ const Footer = () => {
         </ContactItem>
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} />
-          contact@hommeevasion.qc.ca
+          (placez courriel)
         </ContactItem>
         <Payment src="https://res.cloudinary.com/dyzchhb1s/image/upload/v1634061757/Hommeevasion/5e301c279d703b5a12c503c4_poweredstripe.jpg" />
       </Right>

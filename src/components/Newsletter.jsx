@@ -31,6 +31,7 @@ const InputContainer = styled.div`
 `;
 const Input = styled.input`
   border: none;
+  font-style: italic;
   flex: 8;
   padding-left: 20px;
 `;

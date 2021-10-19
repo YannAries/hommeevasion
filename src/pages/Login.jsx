@@ -1,5 +1,8 @@
 import styled from "styled-components";
+import { login } from "../redux/apiCalls";
 import { mobile } from "../responsive";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const Container = styled.div`
   width: 100vw;
@@ -49,6 +52,10 @@ const Button = styled.button`
   color: #fff;
   cursor: pointer;
   margin-bottom: 10px;
+  &:disabled {
+    color: #00ff00;
+    cursor: not allowed;
+  }
 `;
 
 const Link = styled.a`
@@ -58,15 +65,39 @@ const Link = styled.a`
   cursor: pointer;
 `;
 
+const Error = styled.span`
+  color: f00;
+`;
+
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
+
+  const handleclick = (e) => {
+    e.preventDefault();
+    login(dispatch, { username, password });
+  };
   return (
     <Container>
       <Wrapper>
         <Title>CONNEXION / INSCRIPTION</Title>
         <Form>
-          <Input placeholder="Pseudonyme" />
-          <Input placeholder="Mot de passe" />
-          <Button>SE CONNECTER</Button>
+          <Input
+            placeholder="Pseudonyme"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <Input
+            placeholder="Mot de passe"
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button onClick={handleclick} disabled={isFetching}>
+            SE CONNECTER
+          </Button>
+          {error && <Error>Erreur</Error>}
+          {/* <error></error> */}
           <Link>MOT DE PASSE OUBLIÉ ?</Link>
           <Link>CRÉER UN NOUVEAU COMPTE</Link>
         </Form>

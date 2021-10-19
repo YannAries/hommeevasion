@@ -23,7 +23,7 @@ const Info = styled.div`
 const Container = styled.div`
   flex: 1;
   margin: 5px;
-  min-width: 19.27vw;
+  min-width: 280px;  // 19.27vw
   height: 350px;
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ const Container = styled.div`
 const Circle = styled.div`
   width: 200px;
   height: 200px;
-  padding: 5px;
+  // padding: 5px;
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
@@ -52,7 +52,7 @@ const Icon = styled.div`
   display: flex;
   align-center: center;
   justify-content: center;
-  margin: auto; /** centrer icones **/
+  margin: auto; /** centrer icones, 10px **/
   width: 40px;
   height: 40px;
   border-radius: 50%;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   flex: 1;
@@ -25,12 +26,12 @@ const Info = styled.div`
   justify-content: center;
 `;
 const Title = styled.h1`
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 4vw;
-  color: #a52a2a;
-  font-weight: 700;
+  // display: flex;
+  // justify-content: center;
+  // text-align: center;
+  // font-size: 4vw;
+  // color: #a52a2a;
+  // font-weight: 700;
   margin-bottom: 20px;
 `;
 const Button = styled.button`
@@ -45,11 +46,13 @@ const Button = styled.button`
 const CategoryItem = ({ item }) => {
   return (
     <Container>
-      <Image src={item.img} />
-      <Info>
-        <Title>{item.title}</Title>
-        <Button>MAGASINEZ MAINTENANT</Button>
-      </Info>
+      <Link to={`/products/${item.cat}`}>
+        <Image src={item.img} />
+        <Info>
+          <Title>{item.title}</Title>
+          <Button>MAGASINEZ MAINTENANT</Button>
+        </Info>
+      </Link>
     </Container>
   );
 };

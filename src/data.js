@@ -4,6 +4,7 @@ export const sliderItems = [
     img:
       "https://res.cloudinary.com/dyzchhb1s/image/upload/v1634054443/Hommeevasion/louis-mornaud-9avyjpmvxJc-unsplash.jpg",
     title: "COLLECTION SOUS-VÊTEMENT",
+    cat: "homme",
     desc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum aperiam adipisci dolores ea sunt labore accusamus assumenda atque.",
     bg: "f5fafd",
@@ -13,6 +14,7 @@ export const sliderItems = [
     img:
       "https://res.cloudinary.com/dyzchhb1s/image/upload/c_scale,w_640/v1634058146/Hommeevasion/s85-pr-09-a-mockup-googlefocus.jpg",
     title: "COLLECTION CHAUSSETTE",
+    cat: "homme",
     desc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum aperiam adipisci dolores ea sunt labore accusamus assumenda atque.",
     bg: "fcf1ed",
@@ -22,6 +24,7 @@ export const sliderItems = [
     img:
       "https://res.cloudinary.com/dyzchhb1s/image/upload/v1634030706/Hommeevasion/victoria-bilsborough-nLNimOqmbpg-unsplash.jpg",
     title: "TENDANCES SAISONNIÈRES",
+    cat: "homme",
     desc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum aperiam adipisci dolores ea sunt labore accusamus assumenda atque.",
     bg: "fbf0f4",

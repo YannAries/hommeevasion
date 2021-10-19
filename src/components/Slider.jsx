@@ -72,7 +72,7 @@ const Button = styled.button`
   background-color: #099;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
 `;
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);

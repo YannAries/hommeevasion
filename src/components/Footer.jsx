@@ -3,7 +3,6 @@ import {
   Instagram,
   MailOutline,
   Phone,
-  Pinterest,
   Room,
   Twitter,
 } from "@material-ui/icons";
@@ -44,7 +43,7 @@ const Center = styled.div`
   ${mobile({ display: "none" })}
 `;
 const Title = styled.h3`
-  margin-bottom: 30px;
+  margin-bottom: 20px; //30px
 `;
 const List = styled.ul`
   margin: 0;
@@ -60,7 +59,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ backgroundColor: "#fff8f8", textAlign: "flex" })}
+  ${mobile({ backgroundColor: "#fff8f8" })} //textAlign: "flex"
 `;
 const ContactItem = styled.div`
   margin-bottom: 20px;
@@ -103,7 +102,7 @@ const Footer = () => {
           <ListItem>Mon Compte</ListItem>
           <ListItem>Panier</ListItem>
           <ListItem>Suivi de commande</ListItem>
-          <ListItem>Liste de souhaits</ListItem>
+          <ListItem>Liste de voeux</ListItem>
           <ListItem>Termes et conditions d&#39;utilisation</ListItem>
         </List>
       </Center>
@@ -111,15 +110,15 @@ const Footer = () => {
         <Title>Contact</Title>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />
-          3999, rue Wellington, Verdun QC H4G 1V6
+          3999, rue Wellington, Verdun QC H4G 1V6, Canada
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} />
-          +1 514-514-5144
+          +1-514-514-5144
         </ContactItem>
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} />
-          (placez courriel)
+          boutique@courriel.com
         </ContactItem>
         <Payment src="https://res.cloudinary.com/dyzchhb1s/image/upload/v1634061757/Hommeevasion/5e301c279d703b5a12c503c4_poweredstripe.jpg" />
       </Right>

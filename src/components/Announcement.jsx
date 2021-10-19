@@ -7,18 +7,18 @@ const Container = styled.div`
   justify-content: center;
   text-align: center;
   height: 30px;
-  padding: 5px;
+  // padding: 5px;
   background-color: #099;
   color: #fff;
-  font-size: 20px;
-  font-weight: 700px;
-  ${mobile({ fontSize: "14px", textAlign: "center" })}
+  font-size: 14px;
+  font-weight: 400px;
+  // ${mobile({ fontSize: ".68rem", height: "35px", textAlign: "center" })}
 `;
 
 const Announcement = () => {
   return (
     <Container>
-      Superbe affaire ! Frais de port gratuit pour les commandes de plus de 90 $
+      Superbe affaire ! Frais de port gratuit pour les commandes de plus de 100 CA$.
     </Container>
   );
 };

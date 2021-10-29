@@ -1,6 +1,6 @@
 import CSS from "csstype";
 const standard = {
-  fontFamily: "Poppins",
+  fontFamily: "Spartan",
   fontStyle: "normal",
   fontWeight: 400,
   fontSize: "14px",
@@ -26,7 +26,7 @@ const boldlarge = {
   fontSize: "20px",
 };
 const logo = {
-  fontFamily: "Pangolin",
+  fontFamily: "Spartan",
   fontStyle: "normal",
   fontWeight: 200,
   fontSize: "24px",

@@ -10,16 +10,6 @@ import firebase from 'firebase';
 //   // measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 // };
 
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyBhq7S36U6BraF4Sul9PtZ4omxS-i5By9Y',
-//   authDomain: 'little-tags-theta.firebaseapp.com',
-//   projectId: 'little-tags-theta',
-//   storageBucket: 'little-tags-theta.appspot.com',
-//   messagingSenderId: '534440241239',
-//   appId: '1:534440241239:web:e44a7d8cdfd69dd9ba9b12',
-//   measurementId: 'G-6H9VE1CHSF',
-// }
-
 const firebaseConfig = {
   apiKey: "AIzaSyCcdCrBU8bGTEfhrS681HPzqTny1PPS0KI",
   authDomain: "hommeevasion.firebaseapp.com",

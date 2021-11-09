@@ -10,9 +10,6 @@ interface Props {
 export const KeyInfo: React.FC<Props> = ({ product }: Props) => {
   const [size, setSize] = useState<string>()
   const [color, setColor] = useState<string>()
-
-  // console.log(`product`, product)
-
   return (
     <Card className={styles.card}>
       <Card.Header as="div">

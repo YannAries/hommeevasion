@@ -31,7 +31,7 @@ const BreadCrumbs = ({  }: Props) => {
                       styles["r-link"]
                     )}
                   >
-                    {el === "" ? "Home" : toTitleCase(el)}
+                    {el === "" ? "Accueil" : toTitleCase(el)}
                   </Link>
 
                   <span

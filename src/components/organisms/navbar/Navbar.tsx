@@ -81,10 +81,10 @@ const Navbar2 = ({}: Props) => {
             <>
               <NavDropdown title={user?.firstName} id="basic-nav-dropdown" className={styles.link}>
                 <NavDropdown.Item as={Link} to="/profile/addresses">
-                  Profile
+                  Profil
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/profile/orders">
-                  Orders
+                  Commandes
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={logOutHandler}>Déconnexion</NavDropdown.Item>
                 {/* <NavDropdown.Divider /> */}

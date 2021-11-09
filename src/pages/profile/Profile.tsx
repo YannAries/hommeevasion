@@ -10,7 +10,7 @@ import ManageAddress from "components/organisms/ManageAddress/ManageAddress";
 import styles from "./profile.module.css";
 import PrivateRoute from "components/atoms/PrivateRoute/PrivateRoute";
 
-const navItems = ["Addresses", "Wishlist", "Orders"];
+const navItems = ["Adresses", "Liste de souhaits", "Commandes"];
 
 interface Props {}
 

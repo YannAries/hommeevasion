@@ -25,7 +25,7 @@ const Orders = (props: Props) => {
 
       {!loading && !orders.length && (
         <h4>
-          No orders. <Link to="/search">Continuer à magasiner</Link>
+          Aucune commande. <Link to="/search">Continuer à magasiner</Link>
         </h4>
       )}
 

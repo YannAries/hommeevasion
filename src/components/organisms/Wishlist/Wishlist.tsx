@@ -35,7 +35,7 @@ const Wishlist = ({  }: Props) => {
       {loading && <FadingLoader />}
       {!loading && !wishlist.length && (
         <h3>
-          La liste de souhaits est vide{" "}
+          Votre liste de souhaits est vide.{" "}
           <Link to="/search">Parcourir les articles </Link>
         </h3>
       )}

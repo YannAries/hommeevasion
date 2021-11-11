@@ -22,7 +22,7 @@
 
 .heading {
   font-weight: 500;
-  color: black;
+  color: #000;
 }
 
 .img {
@@ -48,7 +48,7 @@
 }
 
 .priceWithoutDiscount {
-  color: grey;
+  color: #808080;
   text-decoration: line-through;
   text-align: right;
   margin-right: 0.5rem;

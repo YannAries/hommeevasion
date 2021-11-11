@@ -32,8 +32,6 @@ const Register = () => {
       dispatch(cartActions.getCartByUser(currentUser.uid));
       dispatch(addressActions.getAddressesByUser(currentUser.uid));
       dispatch(orderActions.getOrdersByUser(currentUser.uid));
-
-      // adding new entry in json-server db
       dispatch(
         userActions.addNewUser({
           id: currentUser.uid,
@@ -55,9 +53,7 @@ const Register = () => {
     setLoading(true);
 
     signup(email, password, `${firstName} ${lastName}`)
-      .then((uid: string) => {
-        // don't need to do anything
-      })
+      .then((uid: string) => {})
       .catch((err: any) => {
         setError(err.message);
         setLoading(false);
@@ -128,7 +124,7 @@ const Register = () => {
             </p>
           </form>
           <br />
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <p style={{ color: "#ff0000" }}>{error}</p>}
         </div>
       )}
     </div>

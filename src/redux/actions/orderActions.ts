@@ -28,7 +28,7 @@ function placeOrder(order: any, cartItems: any[]) {
     orderService.addOrder(order).then(
       (res) => {
         dispatch({ type: actionConst.PLACE_ORDER, order: res.data });
-        dispatch(cartActions.removeMultipleFromCart(cartItems)); // empty cart after placing order
+        dispatch(cartActions.removeMultipleFromCart(cartItems));
         dispatch(alertActions.success("Commande passée avec succès"));
       },
       (error) => {

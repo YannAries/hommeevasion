@@ -52,15 +52,6 @@ const OrderedProducts = ({ products }: Props) => {
           </tr>
         ))}
       </tbody>
-      {/* <tfoot className={styles.tfoot}>
-        <tr>
-          <td></td>
-          <td></td>
-          <td className={styles.price} style={{ fontWeight: 'bold' }}>
-            ₹ {products.reduce((acc, curr) => acc + curr.price, 0)}
-          </td>
-        </tr>
-      </tfoot> */}
     </Table>
   );
 };

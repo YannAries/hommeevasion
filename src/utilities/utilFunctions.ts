@@ -32,19 +32,18 @@ export const processPaymentRazorpay = async (
     key: "rzp_test_oTeKhXvrlA5LXo",
     amount: (orderAmt * 100).toString(),
     currency: "INR",
-    name: "Little Tags Theta",
+    name: "HommeEvasion",
     description: "Test Transaction",
     handler: async function(response: any) {
-      // alert('Payment id: ' + response.razorpay_payment_id)
       callbackFunc(response.razorpay_payment_id);
     },
     prefill: {
-      name: "<YOUR NAME>",
+      name: "<TON NOM>",
       email: "example@example.com",
       contact: "9999999999",
     },
     notes: {
-      address: "Example Corporate Office",
+      address: "Exemple adresse",
     },
     theme: {
       color: "#61dafb",

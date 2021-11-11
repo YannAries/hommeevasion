@@ -6,20 +6,12 @@ import { urlConst } from "utilities/constants";
 import api from "services/api";
 
 interface Props {
-  // reviews: any[]
   productId: number;
 }
 
 export const Reviews: React.FC<Props> = ({ productId }: Props) => {
-  // const dispatch = useDispatch()
-  // const loading = useSelector((state: any) => state.reviews.loading)
-  // const reviews = useSelector((state: any) => state.reviews.detailPage)
   const [loading, setLoading] = useState(false);
   const [reviews, setReviews] = useState([]);
-
-  // useEffect(() => {
-  //   dispatch(reviewActions.getReviewsByProduct(productId))
-  // }, [productId])
 
   useEffect(() => {
     const getReviewsByProduct = (productId: number) => {
@@ -41,7 +33,7 @@ export const Reviews: React.FC<Props> = ({ productId }: Props) => {
 
   return (
     <Card className={styles.card}>
-      <Card.Header as="h2">Revue d&#39;appréciation & Évaluation</Card.Header>
+      <Card.Header as="h2">Revue d&#39;appréciation et évaluation</Card.Header>
       <Card.Body>
         {loading && <FadingLoader />}
         {!loading && reviews.length === 0 && <small>No reviews yet</small>}

@@ -51,7 +51,7 @@ export const AddToCartButton = ({ productId, size, color }: Props) => {
       )}
       {!addedToCart && (
         <>
-          <Button disabled={!size || !color} onClick={handleAddToCart}>
+           <Button onClick={handleAddToCart}> {/* disabled={!size || !color}  */}
             <FaShoppingCart style={iconStyle} />
             Ajouter au panier
           </Button>

@@ -41,7 +41,6 @@ const Profile: React.FC<Props & RouteComponentProps> = ({ match }) => {
           </div>
           <div className={styles.content}>
             <Switch>
-              {/* <PrivateRoute exact path={`${match.path}`} component={ProfileDescription} /> */}
               <PrivateRoute
                 path={`${match.path}/addresses`}
                 component={ManageAddress}

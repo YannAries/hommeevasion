@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect, createContext } from "react";
-import { auth, facebookProvider, db } from "config/firebase";
+// import { auth, facebookProvider, db } from "config/firebase";
+import { auth, db } from "config/firebase";
 import { useDispatch } from "react-redux";
 import ThreeDots from "components/atoms/Loaders/ThreeDots";
 import {
@@ -70,27 +71,26 @@ export function AuthProvider({ children }) {
     return promise;
   };
 
-  const facebookLogin = () => {
-    let promise = new Promise(function(resolve, reject) {
-      auth
-        .signInWithPopup(facebookProvider)
-        .then((res) => {
-          resolve({
-            user: res.user,
-            isNewUser: res.additionalUserInfo.isNewUser,
-          });
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
+  // const facebookLogin = () => {
+  //   let promise = new Promise(function(resolve, reject) {
+  //     auth
+  //       .signInWithPopup(facebookProvider)
+  //       .then((res) => {
+  //         resolve({
+  //           user: res.user,
+  //           isNewUser: res.additionalUserInfo.isNewUser,
+  //         });
+  //       })
+  //       .catch((error) => {
+  //         reject(error);
+  //       });
+  //   });
 
-    return promise;
-  };
+  //   return promise;
+  // };
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-
       setCurrentUser(user);
       setLoading(false);
 
@@ -112,7 +112,6 @@ export function AuthProvider({ children }) {
     signin,
     signout,
     passwordReset,
-    facebookLogin,
   };
 
   return (

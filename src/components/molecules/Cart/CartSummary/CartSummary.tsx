@@ -69,36 +69,36 @@ export const CartSummary = ({
                 <td style={{ width: "10%" }}>
                   <BsCardList className={styles.icon} />
                 </td>
-                <td className={styles.heading}>Total</td>
-                <td>C$ {total}</td>
+                <td className={styles.heading}>Total (dollar canadien)</td>
+                <td>$ {total}</td>
               </tr>
               <tr>
                 <td>
                   <MdLocalOffer className={styles.icon} />
                 </td>
                 <td className={styles.heading}>Remise appliquée</td>
-                <td>C$ {discount}</td>
+                <td>$ {discount}</td>
               </tr>
               <tr>
                 <td>
                   <HiReceiptTax className={styles.icon} />
                 </td>
                 <td className={styles.heading}>TVA</td>
-                <td>C$ {gst}</td>
+                <td>$ {gst}</td>
               </tr>
               <tr>
                 <td>
                   <MdLocalShipping className={styles.icon} />
                 </td>
                 <td className={styles.heading}>Tarif de livraison</td>
-                <td>C$ {0}</td>
+                <td>$ {0}</td>
               </tr>
               <tr>
                 <td>
                   <BiRupee className={styles.icon} />
                 </td>
                 <td className={styles.heading}>Montant à payer</td>
-                <td>C$ {netPayableAmt}</td>
+                <td>$ {netPayableAmt}</td>
               </tr>
             </tbody>
           </Table>

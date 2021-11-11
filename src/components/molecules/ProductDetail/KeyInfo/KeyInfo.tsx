@@ -40,25 +40,16 @@ export const KeyInfo: React.FC<Props> = ({ product }: Props) => {
                       </td>
                       <td>{product.seller}</td>
                     </tr>
-                    {/* <tr>
-                      <td className={styles.heading}>Temps de livraison :</td>
-                      <td>{product.deliveryTime}</td>
-                    </tr> */}
                     <tr>
                       <td className={styles.heading}>Tarif de livraison :</td>
                       <td>{product.deliveryCharge}</td>
                     </tr>
-                    {/* <tr>
-                      <td className={styles.heading}>Retour/Remplacement :</td>
-                      <td>{product.returnReplace}</td>
-                    </tr> */}
                     <tr>
                       <td className={styles.heading}>Prix :</td>
                       <td>
-                        <span className={styles.priceWithoutDiscount}>
-                         {(product.price * (100 - product.discount)) / 100}$ CAD
+                        <span className={styles.priceWithoutDiscount}>{(product.price * (100 - product.discount)) / 100}$
                         </span>
-                        <span className={styles.price}> {product.price}$ CAD</span>
+                        <span className={styles.price}>{product.price}$</span>
                       </td>
                     </tr>
                   </tbody>

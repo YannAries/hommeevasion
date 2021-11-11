@@ -7,8 +7,6 @@
 }
 
 .card:hover {
-  /* box-shadow: 0px 2px 4px rgba(21, 28, 84, 0.5); */
-  /* box-shadow: 0 5px 50px rgb(0 0 0 / 12%), 0 5px 20px rgb(0 0 0 / 10%); */
   cursor: pointer;
 }
 
@@ -22,7 +20,7 @@
 }
 
 .smallDesc {
-  color: grey;
+  color: #808080;
 }
 
 .buttonsWrapper {
@@ -34,7 +32,7 @@
 
 .heading {
   font-weight: 500;
-  color: black;
+  color: #000;
 }
 
 .starRatings {
@@ -45,5 +43,4 @@
 .icon {
   font-size: 1.1rem;
   float: left;
-  /* max-height: ; */
 }

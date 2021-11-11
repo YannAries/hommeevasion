@@ -7,13 +7,11 @@ import { Button } from "components/atoms/Buttons";
 import { userActions } from "redux/actions/userActions";
 import { useDispatch } from "react-redux";
 import { MdEmail } from "react-icons/md";
-import { FaFacebook } from "react-icons/fa";
-// import { Modal } from 'react-bootstrap'
 
 interface Props {}
 
-const Login = (props: Props) => {
-  const { signin, facebookLogin } = useAuth();
+const Login = (_props: Props) => {
+  const { signin } = useAuth();
   const dispatch = useDispatch();
   const history = useHistory();
   const location = useLocation();
@@ -45,7 +43,7 @@ const Login = (props: Props) => {
     setLoading(true);
 
     signin(email, password)
-      .then((uid: string) => {
+      .then((_uid: string) => {
         setLoading(false);
         if (location.search) {
           const qs = require("qs");
@@ -56,47 +54,7 @@ const Login = (props: Props) => {
           history.push(`/`);
         }
       })
-      .catch((error: any) => {
-        // console.log(`error`, error)
-        setError("Courriel ou mot de passe invalide");
-        setLoading(false);
-      });
-  };
-
-  const handleFBLogin = (e: any) => {
-    e.preventDefault();
-
-    setError("");
-    setLoading(true);
-
-    facebookLogin()
-      .then((info: any) => {
-        if (info.isNewUser) {
-          dispatch(
-            userActions.addNewUser({
-              id: info.user.uid,
-              firstName: info.user.displayName,
-              lastName: "",
-              joinDate: Date(),
-              email: info.user.email,
-              defaultAddressId: 0,
-            })
-          );
-          history.push(`/`);
-          return;
-        }
-
-        setLoading(false);
-        if (location.search) {
-          const qs = require("qs");
-          const qsArr = qs.parse(location.search, { ignoreQueryPrefix: true });
-          if (qsArr["returnUrl"]) history.push(qsArr["returnUrl"]);
-          else history.push(`/`);
-        } else {
-          history.push(`/`);
-        }
-      })
-      .catch((error: any) => {
+      .catch((_error: any) => {
         setError("Courriel ou mot de passe invalide");
         setLoading(false);
       });
@@ -132,27 +90,24 @@ const Login = (props: Props) => {
               />
             </div>
 
-            {/* <div className="form-group">
-                <div className="custom-control custom-checkbox">
-                  <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                  <label className="custom-control-label" htmlFor="customCheck1">
-                    Se souvenir
-                  </label>
-                </div>
-              </div> */}
+            <div className="form-group">
+              <div className="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  className="custom-control-input"
+                  id="customCheck1"
+                />
+                <label className="custom-control-label" htmlFor="customCheck1">
+                  Se souvenir
+                </label>
+              </div>
+            </div>
 
             <Button type="submit">
               <MdEmail style={{ float: "left" }} />
               Se connecter
             </Button>
-            <Button
-              variant="primary"
-              customStyle={{ marginTop: "1rem" }}
-              onClick={handleFBLogin}
-            >
-              <FaFacebook style={{ float: "left" }} />
-              Se connecter avec Facebook
-            </Button>
+            {}
 
             <p className="forgot-password text-right">
               <Link to="/forgetPasword">Mot de passe oublié ?</Link>
@@ -162,7 +117,7 @@ const Login = (props: Props) => {
             </p>
           </form>
 
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <p style={{ color: "#ff0000" }}>{error}</p>}
         </div>
       )}
     </div>

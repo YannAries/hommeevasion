@@ -25,10 +25,6 @@ function getTrendingProducts(category: string) {
             });
             break;
 
-          // case 'KIDS':
-          //   dispatch({ type: actionConst.GET_TRENDING_PRODUCTS_KIDS, products: response.data })
-          //   break
-
           default:
             break;
         }

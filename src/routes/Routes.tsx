@@ -15,23 +15,13 @@ const Routes = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={LandingPage} />
-
-        {/* <Route path="/productsearch" component={Home}></Route>
-        <Route path="/cart" component={Cart}></Route>
-        <Route path="/productsearch/:search" component={Home}></Route>
-        <Route path="/productsearch/:search" component={Home}></Route>
-        <Route path="/" exact component={CardsDemo}></Route> */}
-
         <Route path="/search" component={ProductSearch} />
         <Route path="/product/:productId" component={ProductDetail} />
-        {/* <Route path="/cart" component={Cart}></Route> */}
         <PrivateRoute path="/cart" component={Cart} />
-
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/forgetPasword" component={ForgetPassword} />
         <Route path="/profile" component={Profile} />
-
         <Route path="*" component={NotFound404} />
       </Switch>
     </Router>

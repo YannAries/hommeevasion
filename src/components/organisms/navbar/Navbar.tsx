@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navbar, Nav, NavDropdown, Form, FormControl, Badge, InputGroup } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown, Form, Badge, InputGroup } from 'react-bootstrap'
 import { FiShoppingCart, FiHeart } from 'react-icons/fi'
 import { Link, useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
@@ -32,7 +32,6 @@ const Navbar2 = ({}: Props) => {
   const handleSearch = (e?: any) => {
     if (e) e.preventDefault()
     history.push(`/search?q=${searchText}`)
-    // window.history.pushState({}, '', `/search?q=${searchText}`)
   }
 
   return (
@@ -49,9 +48,6 @@ const Navbar2 = ({}: Props) => {
           <Nav.Link as={Link} to={`/search?category=Women`} className={styles.link}>
           Dessous Femme
           </Nav.Link>
-          {/* <Nav.Link as={Link} to={`/search?category=Kids`} className={styles.link}>
-            Kids
-          </Nav.Link> */}
           <Form inline onSubmit={handleSearch}>
             <InputGroup>
               <Form.Control
@@ -67,13 +63,6 @@ const Navbar2 = ({}: Props) => {
                 </InputGroup.Text>
               </InputGroup.Append>
             </InputGroup>
-            {/* <FormControl
-              value={searchText}
-              className={styles.search}
-              type="text"
-              placeholder="Chercher des articles"
-              onChange={(e: any) => setSearchText(e.target.value)}
-            /> */}
           </Form>
         </Nav>
         <Nav>
@@ -87,12 +76,11 @@ const Navbar2 = ({}: Props) => {
                   Commandes
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={logOutHandler}>Déconnexion</NavDropdown.Item>
-                {/* <NavDropdown.Divider /> */}
               </NavDropdown>
               <Nav.Link as={Link} to="/profile/wishlist">
                 <FiHeart className={styles.icon} />
                 {wishCount > 0 && (
-                  <Badge style={{ backgroundColor: ' #ff3e6c', color: 'white', position: 'absolute' }}>
+                  <Badge style={{ backgroundColor: ' #ff3e6c', color: '#fff', position: 'absolute' }}>
                     {wishCount}
                   </Badge>
                 )}
@@ -101,7 +89,7 @@ const Navbar2 = ({}: Props) => {
               <Nav.Link as={Link} to="/cart">
                 <FiShoppingCart className={styles.icon} />
                 {cartItemsCount > 0 && (
-                  <Badge style={{ backgroundColor: ' #ff3e6c', color: 'white', position: 'absolute' }}>
+                  <Badge style={{ backgroundColor: ' #ff3e6c', color: '#fff', position: 'absolute' }}>
                     {cartItemsCount}
                   </Badge>
                 )}

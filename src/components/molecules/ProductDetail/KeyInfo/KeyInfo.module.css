@@ -57,16 +57,14 @@
 
 .priceWithoutDiscount {
   font: 1.5rem Calibri;
-  color: grey;
+  color: #808080;
   text-decoration: line-through;
   text-align: right;
-  /* padding-left: 1.5rem; */
 }
 
 .price {
-  /* font: 18px Calibri; */
   font: 1.5rem Calibri;
-  font-weight: bolder;
+  font-weight: 700;
   text-align: right;
   padding-left: 1rem;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
@@ -79,5 +77,5 @@
 
 .heading {
   font-weight: 500;
-  color: black;
+  color: #000;
 }

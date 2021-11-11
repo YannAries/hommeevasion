@@ -20,7 +20,6 @@ const Orders = (props: Props) => {
 
   return (
     <>
-      {/* {loading && <h3>Loading....</h3>} */}
       {loading && <FadingLoader />}
 
       {!loading && !orders.length && (

@@ -27,7 +27,7 @@ const ProductCard = ({ product, openInNewTab = true }: Props) => {
       <Card.Body className={styles.cardBody}>
         <Card.Title className={styles.cardTitle}>
           {product.title}
-          {/* -{product.id} */}
+          -{product.id}
         </Card.Title>
         <div className={styles.cardTxt}>
           <span className={styles.heading}>Évaluation : </span>
@@ -39,14 +39,12 @@ const ProductCard = ({ product, openInNewTab = true }: Props) => {
           <br />
           <span className={styles.heading}>Prix : </span>
           <span className={styles.priceWithoutDiscount}>
-            {Math.round((product.price * (100 - product.discount)) / 100)}
+            {Math.round((product.price * (100 - product.discount)) / 100)}$
           </span>
-          {product.price}
-          &nbsp; &nbsp;
-          <span className={styles.discount}>{'(' + product.discount + ' % réduc)'}</span>
+          {product.price}$
+          &nbsp;
+          <span className={styles.discount}>{'(' + product.discount + ' % réduc.)'}</span>
           <br />
-          {/* <span className={styles.heading}>Size: </span>
-          <span>{product.size.join(', ')}</span> */}
         </div>
         <br />
         <div className={styles.buttonsWrapper}>

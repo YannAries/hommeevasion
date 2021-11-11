@@ -36,9 +36,10 @@ const ForgetPassword = (props: Props) => {
               onChange={(e) => changeEventHandler(Email, e)}
               type="email"
               className="form-control"
-              placeholder="Enter email"
+              placeholder="Entrer votre courriel"
               value={Email}
             />
+            <br />
             <button type="submit" className="btn btn-dark btn-lg btn-block">
               S&#39;enregistrer
             </button>

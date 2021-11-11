@@ -96,7 +96,6 @@ const Cart = ({  }: Props) => {
               >
                 Passer une commande
               </Button>
-              {/* <p>{netPayableAmt}</p> */}
             </Col>
           </Row>
         )}

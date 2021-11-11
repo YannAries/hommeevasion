@@ -9,12 +9,10 @@ export const wishlistService = {
 };
 
 function getWishlistById(id: string) {
-  // console.log('URL', urlConst.WISHLIST + `/${id}`)
   return api.get(urlConst.WISHLIST + `/${id}?_expand=product&_expand=user`);
 }
 
 function getWishlistByUser(userId: string) {
-  // console.log('URL', urlConst.WISHLIST + `?userId=${userId}&_expand=product&_expand=user`)
   return api.get(
     urlConst.WISHLIST + `?userId=${userId}&_expand=product&_expand=user`
   );

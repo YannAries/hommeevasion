@@ -31,12 +31,11 @@ const Wishlist = ({  }: Props) => {
 
   return (
     <>
-      {/* {loading && <h3>Loading...</h3>} */}
       {loading && <FadingLoader />}
       {!loading && !wishlist.length && (
         <h3>
           Votre liste de souhaits est vide.{" "}
-          <Link to="/search">Parcourir les articles </Link>
+          <Link to="/search">Parcourir les articles</Link>
         </h3>
       )}
       <Row>
@@ -47,7 +46,6 @@ const Wishlist = ({  }: Props) => {
                 key={wish.id}
                 className={styles.card}
                 onClick={() => {
-                  // window.open(`/product/${wish.id}`, '_blank')
                   history.push(`/product/${wish.id}`);
                 }}
               >
@@ -90,14 +88,12 @@ const Wishlist = ({  }: Props) => {
                       </div>
                     </Col>
                     <Col className={styles.buttonsWrapper}>
-                      {/* <Button variant="danger" className={styles.button} block>
-                        <FiShoppingCart className={styles.icon} /> Add To Cart
-                      </Button> */}
                       <Button
                         variant="light"
                         onClick={(e: any) => handleRemove(e, wish.id)}
                       >
-                        <FiXSquare className={styles.icon} /> Supprimer
+                        <FiXSquare className={styles.icon} />
+                        Supprimer
                       </Button>
                     </Col>
                   </Row>

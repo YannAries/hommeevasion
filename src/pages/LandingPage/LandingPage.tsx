@@ -9,7 +9,6 @@ import styles from "./LandingPage.module.css";
 import BannerMen from "assets/banners/men.jpg";
 import BannerWomen from "assets/banners/women.jpg";
 import BannerMenWomen from "assets/banners/men-women.jpg";
-// import BannerKids from "assets/banners/kids.jpg";
 import ProductHighlight from "./ProductHighlight";
 
 const LandingPage = () => {
@@ -18,14 +17,12 @@ const LandingPage = () => {
   const trendingWomen = useSelector(
     (state: any) => state.products.trendingWomen
   );
-  // const trendingKids = useSelector((state: any) => state.products.trendingKids);
   const topOffers = useSelector((state: any) => state.products.topOffers);
 
   const carouselItems = [
     { img: BannerMen, filterStr: "category=Men" },
     { img: BannerWomen, filterStr: "category=Women" },
     { img: BannerMenWomen, filterStr: "category=Men&category=Women" },
-    // { img: BannerKids, filterStr: 'category=Kids' },
   ];
 
   useEffect(() => {
@@ -33,7 +30,6 @@ const LandingPage = () => {
       dispatch(productActions.getTrendingProducts("Men"));
     if (!trendingWomen.length)
       dispatch(productActions.getTrendingProducts("Women"));
-    // if (!trendingKids.length) dispatch(productActions.getTrendingProducts('Kids'))
     if (!topOffers.length) dispatch(productActions.getTopOfferProducts());
   }, []);
 
@@ -52,8 +48,6 @@ const LandingPage = () => {
 
         <ProductHighlight heading="Tendance Homme" products={trendingMen} />
         <ProductHighlight heading="Tendance Femme" products={trendingWomen} />
-        {/* <ProductHighlight heading="Trending In Kids" products={trendingKids}></ProductHighlight> */}
-
         <ProductHighlight heading="Offres exclusives" products={topOffers} />
       </Container>
     </ProductScreenTemplate>

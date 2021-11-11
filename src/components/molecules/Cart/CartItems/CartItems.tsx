@@ -1,10 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Card, Row, Col } from "react-bootstrap";
-import { IncrementDecrement } from "components/atoms/Buttons";
+import { IncrementDecrement, Button } from "components/atoms/Buttons";
 import { ImCross } from "react-icons/im";
-import { Button } from "components/atoms/Buttons";
-
 import { cartActions } from "redux/actions";
 import styles from "./CartItems.module.css";
 
@@ -59,7 +57,7 @@ export const CartItems = ({ cartItems }: Props) => {
                       src={
                         item.product.images &&
                         `${item.product.images[0]}?random=${item.id}`
-                      }
+                      } alt="produit"
                       style={{ maxHeight: "13rem" }}
                     />
                   </Col>
@@ -93,7 +91,6 @@ export const CartItems = ({ cartItems }: Props) => {
                     &nbsp; &nbsp; &nbsp;
                     <span className={styles.heading}>Color: </span>
                     {item.color}
-                    {/* <br /> */}
                   </Col>
                   <Col className={styles.buttonsWrapper}>
                     <IncrementDecrement

@@ -30,15 +30,12 @@ const ProductSearch: React.FC<{}> = () => {
 
   useEffect(() => {
     if (initialRender.current) return;
-    // alert('useEffect[location] ' + initialRender.current)
 
     updateStatesFromQueryString();
   }, [location]);
 
   useEffect(() => {
     if (initialRender.current) return;
-    // alert('useEffect[setState] ' + initialRender.current)
-    // console.log('useEffect2')
 
     const queryString = getQueryStringFromStates();
     window.history.pushState({}, "", "/search" + queryString);
@@ -53,8 +50,6 @@ const ProductSearch: React.FC<{}> = () => {
   ]);
 
   useEffect(() => {
-    // alert('useEffect[] ' + initialRender.current)
-
     if (location.search) updateStatesFromQueryString();
     else getProductsUsingAPI("");
 
@@ -66,7 +61,6 @@ const ProductSearch: React.FC<{}> = () => {
     console.log("GET -- ", urlConst.PRODUCTS + queryString);
     api.get(urlConst.PRODUCTS + queryString).then(
       (res) => {
-        // console.log(`productResults`, res.data)
         setProducts(res.data);
         setLoading(false);
       },
@@ -97,11 +91,8 @@ const ProductSearch: React.FC<{}> = () => {
 
   const updateStatesFromQueryString = () => {
     const qsArr = qs.parse(location.search, { ignoreQueryPrefix: true });
-    // console.log(`qsArr`, qsArr)
 
     Object.keys(qsArr).forEach((key) => {
-      // console.log(`key`, key, qsArr[key])
-
       switch (key.toUpperCase()) {
         case "Q":
           setGlobalSearch(qsArr[key]);
@@ -159,10 +150,7 @@ const ProductSearch: React.FC<{}> = () => {
         <Row>
           <Col sm={2}>
             <br />
-            <h5>
-              Articles trouvés : {products.length}
-              {/* <Badge variant="secondary">Matching Products: {products.length}</Badge> */}
-            </h5>
+            <h5>Articles trouvés : {products.length}</h5>
             <br />
             <SearchFilter
               heading={"Categorie"}

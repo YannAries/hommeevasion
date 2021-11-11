@@ -3,15 +3,13 @@
   margin-bottom: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0px 2px 4px rgba(21, 28, 84, 0.2);
-  /* transition:  1s linear all; */
   opacity: 1;
   -webkit-transition: opacity 1000ms linear;
   transition: opacity 1000ms linear;
 }
 
 .card:hover {
-  box-shadow: 0px 2px 4px rgba(21, 28, 84, 0.5);
-  /* box-shadow: 0 5px 50px rgb(0 0 0 / 12%), 0 5px 20px rgb(0 0 0 / 10%); */
+  box-shadow: 0 2px 4px rgba(21, 28, 84, 0.5);
   cursor: pointer;
 }
 
@@ -25,7 +23,7 @@
 }
 
 .smallDesc {
-  color: grey;
+  color: #808080;
 }
 
 .buttonsWrapper {
@@ -37,7 +35,7 @@
 
 .heading {
   font-weight: 500;
-  color: black;
+  color: #000;
 }
 
 .icon {
@@ -49,7 +47,6 @@
   color: #e7711b;
   font-size: 13px;
   padding: 0;
-  /* float: left; */
 }
 
 .img {

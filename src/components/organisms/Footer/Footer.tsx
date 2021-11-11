@@ -15,9 +15,6 @@ const Footer = (props: Props) => {
           <div>
             <Typography>À propos de nous</Typography>
           </div>
-          {/* <div>
-            <Typography>Blog</Typography>
-          </div> */}
         </div>
         <div className={styles.footertextColumn}>
           <Typography>Connections</Typography>
@@ -28,12 +25,6 @@ const Footer = (props: Props) => {
             <Typography>Twitter</Typography>
           </div>
         </div>
-        {/* <div className={styles.footertextColumn}>
-          <Typography>Earnings</Typography>
-          <div>
-            <Typography>Set in Market</Typography>
-          </div>
-        </div> */}
         <div className={styles.footertextColumn}>
           <Typography>Compte</Typography>
           <div>

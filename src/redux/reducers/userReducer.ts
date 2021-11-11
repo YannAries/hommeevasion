@@ -8,7 +8,7 @@ const initialState = {
 export const user = (state = initialState, action: any) => {
   switch (action.type) {
     case actionConst.LOG_IN: {
-      console.log("************Login Called************************");
+      console.log("connection");
       return { ...state, user: action.user, loggedIn: true };
     }
 
